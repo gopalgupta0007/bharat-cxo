@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import Articales from './components/Articales';
 import Test from './components/Test';
 import axios from 'axios';
+import UpdatePosts from './components/UpdatePosts';
 
 function App() {
   const [cxoData, setcxoData]=useState({});
@@ -45,6 +46,7 @@ function App() {
         <Route exact path="/events" element={<Award data={cxoData.events} />} />
         <Route exact path="/articles" element={<Articales data={cxoData.articles} />} />
         <Route exact path="/content" element={<Content />} />
+        <Route exact path="/cxo/vivek.pravin@2324" element={<UpdatePosts />} />
         <Route exact path="/test" element={<Test />} />
         <Route exact path="/about" element={<About />} />
       </Routes>
