@@ -44,5 +44,34 @@ const updateCxoData = async (req, res) => {
     return res.status(200).send({ massage: "updated data successful" });
 }
 
-module.exports = { getcxoData, updateCxoData };
+const updateCxoArticlesData = async (req, res) => {
+    let updatedUser
+    try {
+        // console.log(req.user);
+        // const authUserId = req.userId;
+        // const authUserId = req.params.id;
+        const { type, title, description, imagePath } = req.body;
+        console.log("req.user => ", { type, title, description, imagePath });
+        const newdata = {title:title, desc:description, img:imagePath};
+        updatedUser = await CXO.findByIdAndUpdate(
+            "66b74d89b79c93a04d17e659",
+            {
+                $push: {
+                    articles:{
+                        $each: [newdata],  // Add new post as an array element
+                        $position: 0       // Add to the front of the array
+                    }
+                }
+            },
+            { new: true }
+        );
+        // res.json(updatedUser.data);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+    return res.status(200).send({ massage: "updated data successful" });
+}
+
+
+module.exports = { getcxoData, updateCxoData, updateCxoArticlesData };
 
