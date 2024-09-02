@@ -42,7 +42,7 @@ function App() {
         <Route exact path="/industries" component={Industries} />
       </Switch> */}
       
-      <Routes>
+      <Routes basename="/content">
         <Route exact path="/" element={<Home data={cxoData.home} />} />
         <Route exact path="/post" element={<Post data={cxoData.posts} />} />
         <Route exact path="/events" element={<Award data={cxoData.events} />} />
