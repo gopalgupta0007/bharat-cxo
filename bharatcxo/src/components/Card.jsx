@@ -1,13 +1,15 @@
 import React from 'react'
 import openContentPage from './methods/methods';
+import { useNavigate } from 'react-router-dom';
 
 function Card({ cioData }) {
+    const navigate = useNavigate();
     return (
         <>
-            <div className="row row-cols-1 row-cols-md-3 g-4 mx-5" style={{ margin: '0 0 -990px' }}>
+            <div className="row row-cols-1 row-cols-md-3 g-4 mx-5 block" style={{ margin: '0 0 -990px' }}>
                 {cioData?.map((cio, index) => {
                     return (
-                        <div className="col" key={index} style={{ borderColor: 'white', outline: 'none', border: 'none' }} onClick={() => { openContentPage(cio.title, cio.img, cio.desc) }} >
+                        <div className="col" key={index} style={{ borderColor: 'white', outline: 'none', border: 'none' }} onClick={() => { openContentPage(cio.title, cio.img, cio.desc); navigate('/content'); }} >
                             <div className="card h-100" style={{ display: 'flex' }}>
                                 <img src={cio.img} className="card-img-top ZoomImg" alt="cio Image" />
                                 <div className="card-body">

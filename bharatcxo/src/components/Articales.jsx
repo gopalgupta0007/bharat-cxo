@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import openContentPage from './methods/methods';
 import UpdateArticles from './UpdateArticles';
+import { useNavigate } from 'react-router-dom';
 
 const Articales = ({ data }) => {
+    const navigate = useNavigate();
 
     const [updateBtnArticle, setUpdateBtnArticle] = useState(false);
 
@@ -70,7 +72,7 @@ const Articales = ({ data }) => {
                     {data?.map((article, index) => {
                         i += 1
                         return (
-                            <div className="card mb-3 postCard" key={index} style={{ maxWidth: '70vw' }} onClick={() => { openContentPage(article.title, article.img, article.desc) }}>
+                            <div className="card mb-3 postCard block" key={index} style={{ maxWidth: '70vw' }} onClick={() => { openContentPage(article.title, article.img, article.desc); navigate('/content'); }}>
                                 <div className="row g-0">
                                     {(i % 2 != 0) ? <div className="col-md-4" style={{ backgroundColor: '#aaa' }}>
                                         <img src={article.img} width="100%" className="img-fluid rounded-start ZoomImg" alt="articles" />

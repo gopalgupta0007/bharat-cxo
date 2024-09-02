@@ -17,7 +17,7 @@ const Content = () => {
             width={document.body.offsetWidth > 768 ? '60%' : '90%'}
           />
         </Zoom><br />
-        <p style={{ fontSize: document.body.offsetWidth > 768 ? '1.2vw' : '4vw' }}>{sessionStorage.getItem("desc")}</p>
+        <p style={{ fontSize: document.body.offsetWidth > 768 ? '1.2vw' : '4vw' }} className='block'>{sessionStorage.getItem("desc")}</p>
       </div>
     </>
   );

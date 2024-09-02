@@ -43,7 +43,7 @@ function Home({data}) {
             <video src={bgVideo} autoPlay loop muted style={{ width: '100%', height: "50%", overflow: 'hidden', border: '2px solid black', position: 'relative', zIndex: -1 }}></video>
           </div>
           <hr />
-          <Carousel />
+          <Carousel className="block"/>
           <hr />
           {/* <Card cioData={cioDataMain} /> */}
           <Card cioData={data} />

@@ -37,7 +37,7 @@ const Award = ({ data }) => {
                 <h1 style={{ textAlign: 'center' }} className="headingAnimation">Award</h1>
                 <div className="photo-gallery">
                     <div className="column">
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -48,7 +48,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -59,7 +59,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -70,7 +70,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -81,7 +81,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -92,7 +92,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -103,7 +103,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -114,7 +114,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -127,7 +127,7 @@ const Award = ({ data }) => {
                         </div>
                     </div>
                     <div className="column">
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -138,7 +138,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -149,7 +149,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -160,7 +160,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -171,7 +171,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -182,7 +182,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -193,7 +193,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -206,7 +206,7 @@ const Award = ({ data }) => {
                         </div>
                     </div>
                     <div className="column">
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -217,7 +217,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -228,7 +228,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -239,7 +239,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -250,7 +250,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -261,7 +261,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
@@ -272,7 +272,7 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                        <div className="photo crd ZoomImg">
+                        <div className="photo crd ZoomImg block">
                             <Zoom>
                                 <img
                                     // id='zoomImg'
