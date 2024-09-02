@@ -4,29 +4,30 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
 const Award = ({ data }) => {
+
     const awardImg = [
-        "https://media.licdn.com/dms/image/D4D22AQE2uDTjkzfRMQ/feedshare-shrink_800/0/1721202033936?e=1724889600&v=beta&t=xrGKjzMQHsp46IKoYvKabGgExYFsL4tRdWkeNuGZpBA",
-        "https://media.licdn.com/dms/image/D4D22AQF55JcXGc-coA/feedshare-shrink_2048_1536/0/1720246370958?e=1724889600&v=beta&t=DWtvfE-_W1DEqP8Ebc-2Uv7dJ45PxLxj6muT2QeTT-E",
-        "https://media.licdn.com/dms/image/D4D22AQFsHeiRlUwpMw/feedshare-shrink_800/0/1719189897454?e=1724889600&v=beta&t=qwyXnndeV9-qCvc7RXGcBKcqyD_qvzqpCd53okHmrys",
-        "https://media.licdn.com/dms/image/D4D22AQHaoEuuqCuDqg/feedshare-shrink_1280/0/1717827554274?e=1724889600&v=beta&t=NkubquHH0IzXm0adHxQi32z3bkeiDC2tVDtj_Xu_f-U",
-        "https://media.licdn.com/dms/image/D4D22AQEfJGNr-AKG1Q/feedshare-shrink_2048_1536/0/1719299890279?e=1724889600&v=beta&t=58pg_N8wV20z-_iR6SvUgKuwNp4gkadlqSIH03SJm-Y",
-        "https://media.licdn.com/dms/image/D5622AQFhmM4hFUZJkw/feedshare-shrink_2048_1536/0/1720505001470?e=1724889600&v=beta&t=u-u5DSAloI-Fg-rZnk3VVfroqnKZDy5Cs1b0ID_phEo",
-        "https://media.licdn.com/dms/image/D4D22AQFXlbn_u977bw/feedshare-shrink_800/0/1721025453416?e=1724889600&v=beta&t=UAr4IUZhxdDrZtyLNot9a8COxkPC1dym0YAG33TxB9I",
-        "https://media.licdn.com/dms/image/D4D22AQHkosQZ746dqg/feedshare-shrink_800/0/1719818421225?e=1724889600&v=beta&t=YCNDFldO_iYR-Iu2KqbXHH6rHRDh6dtNluzqshWqn3E",
-        "https://media.licdn.com/dms/image/D4D22AQGyLQLPSGAy2A/feedshare-shrink_800/0/1718609918472?e=1724889600&v=beta&t=MJYj2m5FJXe2s2F-hhUfu-MC2WBXtWazSQ8FvtRxKh8",
-        "https://media.licdn.com/dms/image/D4E22AQEOMYK6DBmJ6Q/feedshare-shrink_1280/0/1721287411645?e=1724889600&v=beta&t=ZVuswC_wz72qoRE82sdkrT--ElOpIXcPauv4UbmajXQ",
-        "https://media.licdn.com/dms/image/D4D22AQE4Gkp4-1HMlg/feedshare-shrink_800/0/1719043233808?e=1724889600&v=beta&t=NW60z9uanKqepxO4W1S-wMVIUEyaUzTOgiJcBH09iAc",
-        "https://media.licdn.com/dms/image/D4D22AQFvbuHho5N_qw/feedshare-shrink_800/0/1719893861423?e=1724889600&v=beta&t=-pOmeQRDCPwg8n-ndPfnThYuRMr26ElXhFbLwTB2_vg",
-        "https://media.licdn.com/dms/image/D4D22AQHF8I9zJ5nFog/feedshare-shrink_800/0/1717222474917?e=1724889600&v=beta&t=JBd192hejDuXI6gQlzpT-skUm2CfbwFViy2k6pd516E",
-        "https://media.licdn.com/dms/image/D5622AQHp7-4qeX8t5Q/feedshare-shrink_2048_1536/0/1716438333924?e=1724889600&v=beta&t=9cTaZSy0GjuaGTedzRCHe6TuwJ849hcz1209onvym0o",
-        "https://media.licdn.com/dms/image/D4D22AQGeQ6yejO-4lw/feedshare-shrink_800/0/1716277467709?e=1724889600&v=beta&t=mT3V3h1SFfGNA0jGd7Zi5yljPkAEzCTnwoQiF4zsDks",
-        "https://media.licdn.com/dms/image/D4D22AQFgo35TGaSDKA/feedshare-shrink_800/0/1716208238234?e=1724889600&v=beta&t=vOeZSrsurv9ZyOXHZluRnaBDCuFhYujNwjTwQUR6q5E",
-        "https://media.licdn.com/dms/image/D4D22AQFS-mZsXNqarw/feedshare-shrink_800/0/1716016435312?e=1724889600&v=beta&t=B8Xlj6oHluk3CUFUCiz-jw4NxGzi3BC5fpP8PfwXIwk",
-        "https://media.licdn.com/dms/image/D4D22AQH6cv4rgEK7gg/feedshare-shrink_1280/0/1715932458534?e=1724889600&v=beta&t=_QiMMWHLCptlg9bf8AueepbhBg2Ex6bMWGPNeq1Jhu8",
-        "https://media.licdn.com/dms/image/D4D22AQFfwX0sysoP3w/feedshare-shrink_800/0/1714542053866?e=1724889600&v=beta&t=jxaWmJHve-D_15TKFL7NTTC9q-1GjjQdiyc68NaEj_Y",
-        "https://media.licdn.com/dms/image/D4D22AQFkj9YiyY7yRA/feedshare-shrink_2048_1536/0/1713782358691?e=1724889600&v=beta&t=8ba1ObCAIo0Wkt0oLT7D-3DRwioiSquzIJH0pGYoFyE",
-        "https://media.licdn.com/dms/image/D4D22AQGfTCyDd6CQcg/feedshare-shrink_1280/0/1710566167675?e=1724889600&v=beta&t=x99DOXfMKD89DLxp5LFADL7DBvfrKKB_rVYutdcevAM",
-        "https://media.licdn.com/dms/image/D5622AQFZSGHac5AXqA/feedshare-shrink_800/0/1705494562755?e=1724889600&v=beta&t=Gwios0Bi6fAldRQlQGJi44qvL4yDhzJExF3yfWB6OT0"
+        "https://github.com/user-attachments/assets/a6406584-8a30-45e2-b950-2cc9ff8db0ed",
+        "https://github.com/user-attachments/assets/cb0041d3-7659-4f68-a6f0-00cc8ef4b17f",
+        "https://github.com/user-attachments/assets/f2dc0e25-38b1-413c-b197-6d465952dfbf",
+        "https://github.com/user-attachments/assets/115fa579-a09f-48de-851a-b1b38c43244b",
+        "https://github.com/user-attachments/assets/e9a5b674-6171-4d97-92e3-0fdfec873fc7",
+        "https://github.com/user-attachments/assets/85b41e9c-8114-47b8-82c8-f9eaf8e25325",
+        "https://github.com/user-attachments/assets/76b44caf-ad10-4039-9830-4c1297780ce6",
+        "https://github.com/user-attachments/assets/68ddda29-2cfb-4950-a824-84393a792c66",
+        "https://github.com/user-attachments/assets/a5347520-d60e-4c51-9e07-daae72bf167e",
+        "https://github.com/user-attachments/assets/f29081fd-4e47-4fcb-96f2-978f53f1623f",
+        "https://github.com/user-attachments/assets/2e0061c5-182d-476a-ac63-23bb3dcbdf25",
+        "https://github.com/user-attachments/assets/b35e0b82-3af3-4db3-a4bb-51ac3c4a766a",
+        "https://github.com/user-attachments/assets/603ea600-26d3-41a0-a531-b4bcd27840d3",
+        "https://github.com/user-attachments/assets/26941f1b-82a9-4499-bc7a-d362edf282f8",
+        "https://github.com/user-attachments/assets/f98f893c-ca8f-4c8c-b39e-08029132e883",
+        "https://github.com/user-attachments/assets/acb8f261-fbff-4676-af23-60176a4634ec",
+        "https://github.com/user-attachments/assets/76440ccd-8153-4a7b-9d6f-83cc044e8270",
+        "https://github.com/user-attachments/assets/9e46f638-959e-400d-9e9f-51ee5500f6dd",
+        "https://github.com/user-attachments/assets/aed603f8-6523-4d61-81b0-3235f4dd0255",
+        "https://github.com/user-attachments/assets/e7207a38-4ae8-4dcb-b22c-c49035a0700a",
+        "https://github.com/user-attachments/assets/12123420-d0b7-4776-a040-764d26999ed1",
+        "https://github.com/user-attachments/assets/5e349c36-1024-4f8a-a3b5-17e260d56ef1"
     ]
 
     return (
@@ -113,8 +114,6 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                    </div>
-                    <div className="column">
                         <div className="photo crd ZoomImg">
                             <Zoom>
                                 <img
@@ -126,6 +125,8 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
+                    </div>
+                    <div className="column">
                         <div className="photo crd ZoomImg">
                             <Zoom>
                                 <img
@@ -192,8 +193,6 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
-                    </div>
-                    <div className="column">
                         <div className="photo crd ZoomImg">
                             <Zoom>
                                 <img
@@ -205,6 +204,8 @@ const Award = ({ data }) => {
                                 />
                             </Zoom>
                         </div>
+                    </div>
+                    <div className="column">
                         <div className="photo crd ZoomImg">
                             <Zoom>
                                 <img
