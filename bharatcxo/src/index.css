@@ -213,6 +213,7 @@ hr {
 }
 
 #content-Container {
+  width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,6 +251,20 @@ hr {
   top: -300px;
   opacity: 1;
   transform: scale(5);
+}
+
+.ZoomImg{
+  background-color: #aaa;
+  animation: bgloadimg 1s infinite forwards ease-in-out;
+}
+
+#zoomImg{
+  background-color: #aaa;
+  animation: borderAnimate 1s infinite forwards ease-in-out;
+}
+@keyframes bgloadimg {
+  from{background-color: #aaa;}
+  to{background-color: #fff;}
 }
 
 @keyframes borderAnimate {

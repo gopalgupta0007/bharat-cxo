@@ -1,10 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import { useNavigate } from 'react-router-dom'
 import openContentPage from './methods/methods';
+import UpdateArticles from './UpdateArticles';
 
-const Articales = ({data}) => {
-    const navigate = useNavigate();
+const Articales = ({ data }) => {
+
+    const [updateBtnArticle, setUpdateBtnArticle] = useState(false);
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            // Check if the combination Ctrl+C+X+O is pressed
+            if (event.ctrlKey && event.key === 'c') {
+                document.addEventListener('keydown', (eventX) => {
+                    if (eventX.key === 'x') {
+                        document.addEventListener('keydown', (eventO) => {
+                            if (eventO.key === 'o') {
+                                setUpdateBtnArticle(true)
+                            }
+                        });
+                    }
+                });
+            }
+        };
+
+        // Add event listener for keydown
+        document.addEventListener('keydown', handleKeyDown);
+
+        // Cleanup the event listener
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     const articleData = [
         {
             title: "World Bank Perspective: Private Sector Instrumental in Driving Tanzania’s Sustainable Development",
@@ -31,41 +58,43 @@ const Articales = ({data}) => {
             img: "https://media.licdn.com/dms/image/D5610AQEvpdGSB-8erA/image-shrink_800/0/1696006811607?e=1723118400&v=beta&t=wuZQghiyyWw9n2nnw1CKVpXBn525xnZToHTNyIYsecM",
             desc: "The Vision/Traction Organizer is a great tool to help your company narrow your vision.This tool helps to map your goals on paper, simplify the planning process, and provide clarity for your vision.Download the PDF to get started: https://lnkd.in/eG5MQjyN"
         }
-    ]   
-    var i=0;
+    ]
+
+    var i = 0;
     return (
         <>
             <HelmetProvider>
                 <Helmet><title>Bharat CXO || Post</title></Helmet>
-                <div style={{ width: '70vw', margin: '130px auto -1000px'}}>
+                <div style={{ width: '70vw', margin: '130px auto -1000px' }}>
                     <h1 style={{ textAlign: 'center', marginBottom: '2vw' }} className="headingAnimation">Articles</h1>
-                    {data?.map((article,index) => {
-                        i+=1
+                    {data?.map((article, index) => {
+                        i += 1
                         return (
-                            <div className="card mb-3 postCard" key={index} style={{ maxWidth: '70vw' }} onClick={() => { openContentPage(article.title, article.img, article.desc, navigate) }}>
+                            <div className="card mb-3 postCard" key={index} style={{ maxWidth: '70vw' }} onClick={() => { openContentPage(article.title, article.img, article.desc) }}>
                                 <div className="row g-0">
-                                    {(i%2!=0)?<div className="col-md-4" style={{ backgroundColor: '#aaa' }}>
-                                        <img src={article.img} className="img-fluid rounded-start" alt="articles" />
-                                    </div>:''}
+                                    {(i % 2 != 0) ? <div className="col-md-4" style={{ backgroundColor: '#aaa' }}>
+                                        <img src={article.img} width="100%" className="img-fluid rounded-start ZoomImg" alt="articles" />
+                                    </div> : ''}
                                     <div className="col-md-8">
                                         <div className="card-body">
-                                            <h5 className="card-title" style={{fontSize:'2vw', fontWeight:'500'}}>{article.title}</h5>
-                                            <p className="card-text" style={{fontSize:'1vw'}}>{(article.desc.length >= 300) ? article.desc.substring(0, 300) + "..." : article.desc}</p>
+                                            <h5 className="card-title" style={{ fontSize: '2vw', fontWeight: '500' }}>{article.title}</h5>
+                                            <p className="card-text" style={{ fontSize: '1vw' }}>{(article.desc.length >= 300) ? article.desc.substring(0, 300) + "..." : article.desc}</p>
                                         </div>
                                     </div>
-                                    {(i%2==0)?<div className="col-md-4" style={{ backgroundColor: '#aaa' }}>
+                                    {(i % 2 == 0) ? <div className="col-md-4" style={{ backgroundColor: 'transparent' }}>
                                         <img src={article.img} className="img-fluid rounded-start" alt="articles" />
-                                    </div>:''}
+                                    </div> : ''}
                                 </div>
                             </div>
                         )
                     })
                     }
+                    {updateBtnArticle && <><br /><UpdateArticles /></>}
                 </div>
-                {/* <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7194946812904894464" height="1004" width="504" frameborder="0" allowfullscreen="" title="Embedded post" style={{ transform: 'scale(0.7)', position: 'relative', bottom: '150px' }}></iframe> */}
             </HelmetProvider>
         </>
     )
 }
 
-export default Articales
+export default Articales;
+

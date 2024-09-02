@@ -1,9 +1,40 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import openContentPage from './methods/methods';
 import { useNavigate } from 'react-router-dom';
+import UpdatePosts from './UpdatePosts';
+import { useEffect, useState } from 'react';
 
 function Post({ data }) {
+
   const navigate = useNavigate()
+
+  const [updateBtn, setUpdateBtn] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Check if the combination Ctrl+C+X+O is pressed
+      if (event.ctrlKey && event.key === 'c') {
+        document.addEventListener('keydown', (eventX) => {
+          if (eventX.key === 'x') {
+            document.addEventListener('keydown', (eventO) => {
+              if (eventO.key === 'o') {
+                setUpdateBtn(true)
+              }
+            });
+          }
+        });
+      }
+    };
+
+    // Add event listener for keydown
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Cleanup the event listener
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const postData = [
     {
       title: "Anand Mangalam : journey of Innovation and Growth",
@@ -220,6 +251,7 @@ function Post({ data }) {
       desc: "🚀 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐢𝐧𝐠 𝐭𝐡𝐞 𝐫𝐞𝐦𝐚𝐫𝐤𝐚𝐛𝐥𝐞 𝐣𝐨𝐮𝐫𝐧𝐞𝐲 𝐨𝐟 𝐏𝐫𝐚𝐧𝐚𝐯 𝐏𝐚𝐫𝐚𝐧𝐣𝐩𝐞, a leader in information security and the Chief Information Security Officer at Unity Small Finance Bank. From technical expertise to strategic leadership, Pranav Paranjpe contributions have fortified digital security across the financial sector. 🌐🔐Join us in exploring the inspiring journey of Pranav Paranjpe, CISO at Unity Small Finance Bank. With a career spanning over 18 years, Pranav Paranjpe has been a driving force in cybersecurity, leading initiatives that safeguard our digital future. His story is a testament to the power of dedication, expertise, and leadership in navigating the complexities of information security."
     }
   ]
+
   return (
     <>
       <HelmetProvider>
@@ -229,9 +261,9 @@ function Post({ data }) {
           {
             data?.map((card, index) => {
               return (
-                <div className="row g-2 my-1 mx-0 postCard" key={index} onClick={() => { openContentPage(card.title, card.img, card.desc, card.src,navigate) }}>
-                  <div className="col-md-4">
-                    <img src={card.img} className="img-fluid rounded-start" alt="postImg" />
+                <div className="row g-2 my-1 mx-0 postCard" key={index} onClick={() => { openContentPage(card.title, card.img, card.desc, card.src, navigate) }}>
+                  <div className="col-md-4 ZohoImg" style={{ outline:'none',border:'none', padding :'0', borderRadius:'5px'}}>
+                    <img src={card.img} className="img-fluid rounded-start ZoomImg" alt="postImg" />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -243,6 +275,7 @@ function Post({ data }) {
               )
             })
           }
+          {updateBtn&&<><br/><UpdatePosts/></>}
         </ div>
       </HelmetProvider>
     </>

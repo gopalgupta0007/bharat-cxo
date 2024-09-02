@@ -1,8 +1,10 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
-const Award = ({data}) => {
-    const awardImg=[
+const Award = ({ data }) => {
+    const awardImg = [
         "https://media.licdn.com/dms/image/D4D22AQE2uDTjkzfRMQ/feedshare-shrink_800/0/1721202033936?e=1724889600&v=beta&t=xrGKjzMQHsp46IKoYvKabGgExYFsL4tRdWkeNuGZpBA",
         "https://media.licdn.com/dms/image/D4D22AQF55JcXGc-coA/feedshare-shrink_2048_1536/0/1720246370958?e=1724889600&v=beta&t=DWtvfE-_W1DEqP8Ebc-2Uv7dJ45PxLxj6muT2QeTT-E",
         "https://media.licdn.com/dms/image/D4D22AQFsHeiRlUwpMw/feedshare-shrink_800/0/1719189897454?e=1724889600&v=beta&t=qwyXnndeV9-qCvc7RXGcBKcqyD_qvzqpCd53okHmrys",
@@ -31,36 +33,255 @@ const Award = ({data}) => {
         <HelmetProvider>
             <Helmet><title>Bharat CXO || Awards</title></Helmet>
             <div className="Container">
-                <h1 style={{textAlign:'center'}} className="headingAnimation">Award</h1>
+                <h1 style={{ textAlign: 'center' }} className="headingAnimation">Award</h1>
                 <div className="photo-gallery">
                     <div className="column">
-                        {console.log(data)}
-                        <div className="photo crd"><img src={awardImg[0]} alt="img0"/></div>
-                        <div className="photo crd"><img src={awardImg[1]} alt="img1"/></div>
-                        <div className="photo crd"><img src={awardImg[2]} alt="img2"/></div>
-                        <div className="photo crd"><img src={awardImg[3]} alt="img3"/></div>
-                        <div className="photo crd"><img src={awardImg[4]} alt="img4"/></div>
-                        <div className="photo crd"><img src={awardImg[5]} alt="img5"/></div>
-                        <div className="photo crd"><img src={awardImg[6]} alt="img6"/></div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[0]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[1]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[2]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[3]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[4]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[5]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[6]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
                     </div>
                     <div className="column">
-                        <div className="photo crd"><img src={awardImg[7]} alt="img7"/></div>
-                        <div className="photo crd"><img src={awardImg[8]} alt="img8"/></div>
-                        <div className="photo crd"><img src={awardImg[9]} alt="img9"/></div>
-                        <div className="photo crd"><img src={awardImg[10]} alt="img10"/></div>
-                        <div className="photo crd"><img src={awardImg[11]} alt="img11"/></div>
-                        <div className="photo crd"><img src={awardImg[12]} alt="img12"/></div>
-                        <div className="photo crd"><img src={awardImg[13]} alt="img13"/></div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[7]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[8]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[9]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[10]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[11]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[12]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[13]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
                     </div>
                     <div className="column">
-                        <div className="photo crd"><img src={awardImg[14]} alt="img14"/></div>
-                        <div className="photo crd"><img src={awardImg[15]} alt="img15"/></div>
-                        <div className="photo crd"><img src={awardImg[16]} alt="img16"/></div>
-                        <div className="photo crd"><img src={awardImg[17]} alt="img17"/></div>
-                        <div className="photo crd"><img src={awardImg[18]} alt="img18"/></div>
-                        <div className="photo crd"><img src={awardImg[19]} alt="img19"/></div>
-                        <div className="photo crd"><img src={awardImg[20]} alt="img20"/></div>
-                        <div className="photo crd"><img src={awardImg[21]} alt="img21"/></div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[14]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[15]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[16]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[17]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[18]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[19]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[20]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
+                        <div className="photo crd ZoomImg">
+                            <Zoom>
+                                <img
+                                    // id='zoomImg'
+                                    className='ZoomImg'
+                                    src={awardImg[21]}
+                                    alt="Zoomable"
+                                    width={document.body.offsetWidth > 768 ? '60%' : '90%'}
+                                />
+                            </Zoom>
+                        </div>
                     </div>
                 </div>
             </div>

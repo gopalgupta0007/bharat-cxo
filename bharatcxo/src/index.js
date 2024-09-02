@@ -7,6 +7,11 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
 
+import $ from 'jquery';
+// import UpdatePosts from './components/UpdatePosts';
+
+window.jQuery = $
+
 axios.defaults.baseURL=process.env.REACT_APP_BACKENDURL;
 // axios.defaults.baseURL=process.env.BackendUrl;
 const root = ReactDOM.createRoot(document.getElementById('root'));
