@@ -261,7 +261,7 @@ function Post({ data }) {
           {
             data?.map((card, index) => {
               return (
-                <div className="row g-2 my-1 mx-0 postCard" key={index} onClick={() => { openContentPage(card.title, card.img, card.desc, card.src, navigate) }}>
+                <div className="row g-2 my-1 mx-0 postCard" key={index} onClick={() => { openContentPage(card.title, card.img, card.desc, card.src); navigate(); }}>
                   <div className="col-md-4 ZohoImg" style={{ outline:'none',border:'none', padding :'0', borderRadius:'5px'}}>
                     <img src={card.img} className="img-fluid rounded-start ZoomImg" alt="postImg" />
                   </div>
