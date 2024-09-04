@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 function Post({ data }) {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [updateBtn, setUpdateBtn] = useState(false);
 

@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'// import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'// import logo from './logo.svg';
 // import { Route, Switch } from 'react-router-dom';
 import About from '../src/components/About';
 import Header from './components/Header';
@@ -41,15 +41,15 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/industries" component={Industries} />
       </Switch> */}
-      
+
       <Routes>
         <Route exact path="/" element={<Home data={cxoData.home} />} />
         <Route exact path="/post" element={<Post data={cxoData.posts} />} />
         <Route exact path="/events" element={<Award data={cxoData.events} />} />
         <Route exact path="/articles" element={<Articales data={cxoData.articles} />} />
-        <Route exact path="/content" element={<Content />} />
-        <Route exact path="/test" element={<Test />} />
+        <Route path="/content" element={<Content />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/test" element={<Test />} />
       </Routes>
       {/* <Home /> */}
       <Footer />
